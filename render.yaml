@@ -1,7 +1,11 @@
 services:
   - type: web
-    name: my-webhook-app
+    name: telegram-webhook-bot
     runtime: python
     buildCommand: ""
     startCommand: gunicorn main:app
-    pythonVersion: 3.10.13
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    autoDeploy: true
